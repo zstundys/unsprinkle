@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
+import Picture from "../Picture";
 
 const PhotoGridItem = ({ id, src, alt, tags }) => {
   return (
@@ -22,7 +22,7 @@ const Anchor = styled.a`
   outline-offset: 4px;
 `;
 
-const Image = styled.img`
+const Image = styled(Picture)`
   display: block;
   width: 100%;
   height: 300px;
