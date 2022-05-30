@@ -4,8 +4,11 @@ import Picture from "../Picture";
 const Hero = () => {
   return (
     <Wrapper>
-      <HeroImage src="/images/hero-img" />
-      <Swoop src="/swoop.svg" />
+      <HeroImage
+        src="/images/hero-img"
+        alt="Blue-eyed cat staring at the camera"
+      />
+      <Swoop src="/swoop.svg" alt="" />
     </Wrapper>
   );
 };

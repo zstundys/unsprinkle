@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Picture = ({
   className,
   src,
+  alt,
   formats = ["avif", "jpg"],
   sizes = ["", "@2x", "@3x"],
 }) => {
@@ -20,7 +21,7 @@ const Picture = ({
             .join(", ")}
         />
       ))}
-      <Img className={className} src={srcFallback} alt="" />
+      <Img className={className} src={srcFallback} alt={alt} />
     </picture>
   );
 };
