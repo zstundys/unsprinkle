@@ -31,17 +31,30 @@ const Image = styled(Picture)`
 `;
 
 const Tags = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: block;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 4px 0;
 `;
 
 const Tag = styled.li`
-  padding: 4px 8px;
-  background: var(--color-gray-300);
+  display: inline;
   font-size: 0.875rem;
   font-weight: 475;
   color: var(--color-gray-800);
+  position: relative;
+  margin-left: 8px;
+  margin-right: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -4px -8px;
+    background: var(--color-gray-300);
+    z-index: -1;
+  }
 `;
 
 export default PhotoGridItem;
